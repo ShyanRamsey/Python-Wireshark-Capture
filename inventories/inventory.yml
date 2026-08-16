@@ -1,0 +1,10 @@
+---
+devices:
+  - name: Router1
+    device_type: cisco_ios
+    host: 192.168.1.1
+    port: 22
+  - name: Switch01
+    device_type: cisco_ios
+    host: 192.168.1.60
+    port: 22

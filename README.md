@@ -1,5 +1,16 @@
-This is a network automation tool that I am writing for a Wireshark packet capture project. 
-I am intending to either use Netmiko or Ansible to gather and/or configure at least 2 network devices. 
-More to come as my code comes together. Note to self: test against Cisco Sandbox prior to lab day. 
+This is a Netmiko script that will gather network device configuration.
+=========================================================================
 
-TODO: I will provide a more detailed README with secrets details for security and so on. 
+_Install requirements.txt_
+Windows/Linux: pip install -r requirements.txt
+Sometimes pip install gives a error: externally-managed-environment error. Try:
+   1. Creating a venv and activating it
+   2. pip install -r requirements.txt
+   3. python3 -c "import netmiko; print(netmiko.__version__)" to verify
+
+_For secure credentials_
+Create a .env file. This loads your credentals as environment variables.
+A .env file also helps keep your code reusable.
+
+I will finish this at a later date with more info :)
+
