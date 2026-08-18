@@ -1,0 +1,8 @@
+2026-08-18T00:18:18.339154 [Router1] Connecting to devnetsandboxiosxec8k.cisco.com
+Connected (version 2.0, client Cisco-1.25)
+Authentication (password) failed.
+2026-08-18T00:18:20.773492 [Router1] Authentication failed
+2026-08-18T00:20:30.567515 [Router1] Connecting to devnetsandboxiosxec8k.cisco.com
+Connected (version 2.0, client Cisco-1.25)
+Authentication (password) failed.
+2026-08-18T00:20:32.991383 [Router1] Authentication failed

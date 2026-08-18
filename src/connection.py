@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from logs.logger import log
 import yaml
 
+print("connection started")
 class NetworkConnectionManager:
     def __init__(self, path='inventories/inventory.yml'):
         load_dotenv()
@@ -37,8 +38,6 @@ class NetworkConnectionManager:
                 running_config = self.connection.send_command("show run")
                 with open (f"config/{device['host']}", 'w', encoding='utf-8') as f:
                     f.write(running_config)
-
-                    self.connection.disconnect()
         except NetMikoAuthenticationException:
             log(name, "Authentication failed")
             raise
@@ -49,3 +48,9 @@ class NetworkConnectionManager:
         finally:
             if self.connection:
                 self.connection.disconnect()
+
+if __name__ == "__main__":
+    manager = NetworkConnectionManager()
+    manager.load_env_variables()
+    manager.netmiko_connection()
+    
